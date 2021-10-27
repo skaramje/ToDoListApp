@@ -1,3 +1,9 @@
+h1 {
+    font-size: 5vh;
+    font-family: 'Arial';
+    padding-left: 10%;
+}
+
 body {
     margin: 0;
     font-family: 'Arial';
@@ -10,9 +16,11 @@ body {
   }
   
   .app {
-    background: #209cee;
+    background: orange;
     padding: 30px;
     height: 100vh;
+    width: fit-content;
+    border-radius: 3px;
   }
   
   .todo-list{
