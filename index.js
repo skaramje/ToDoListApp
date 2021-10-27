@@ -19,9 +19,7 @@ function App(){
         setTodos(newTodos);
     }
 
-    const removeTodo = e => {
-        const index = Number(e.target.id);
-        /* key also works instead of id (curiosity sake) */
+    const removeTodo = index => {
         let temp = [...todos];
         temp.splice(index,1);
         setTodos(temp);
@@ -29,8 +27,8 @@ function App(){
 
     return(
         <>
-        {todos.map((todo, i) =>(
-        <div className='todo' id={i} key={i} onClick={removeTodo}>{todo.text}</div>
+        {todos.map((todo, i) => (
+            <Todo index={i} key={i} todo={todo} remove={removeTodo} />
         ))}
         
         <TodoForm addTodo={addTodo}/>
