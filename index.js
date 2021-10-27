@@ -24,6 +24,7 @@ function App(){
 
     const removeTodo = e => {
         const index = Number(e.target.id);
+        /* key also works instead of id (curiosity sake) */
         let temp = [...todos];
         temp.splice(index,1);
         setTodos(temp);
